@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+
+	<display-name>Draftparser created by Martin Hans</display-name>
+
+	<!-- Load Spring Context -->
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>/WEB-INF/applicationContext.xml</param-value>
+	</context-param>
+
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+	<!-- Load Spring Context -->
+
+	<!-- Everything for the spring servlet -->
+	<servlet>
+		<!-- Just a name -->
+		<servlet-name>draftparser-backend</servlet-name>
+
+		<!-- Servlet Container for Jersey 2.x -->
+		<servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>
+		<!-- Decide which folder should be scanned for REST services -->
+		<init-param>
+			<param-name>jersey.config.server.provider.packages</param-name>
+			<param-value>de.marrrschine.draftparser.draftparser_backend</param-value>
+		</init-param>
+		<!-- Should the subfolders be scanned as well? -->
+		<init-param>
+			<param-name>jersey.config.server.provider.scanning.recursive</param-name>
+			<param-value>true</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<!-- Where should the Jersey Servlets be published? -->
+	<servlet-mapping>
+		<servlet-name>draftparser-backend</servlet-name>
+		<url-pattern>/webapi</url-pattern>
+	</servlet-mapping>
+
+</web-app>

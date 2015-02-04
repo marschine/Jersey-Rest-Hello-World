@@ -8,7 +8,9 @@ http://www.codingpedia.org/ama/restful-web-services-example-in-java-with-jersey-
 http://www.mkyong.com/webservices/jax-rs/jersey-spring-integration-example/
 Tutorial.
 
-Worked on remote Tomcat 7 - local Tomcat8
+Worked on remote Tomcat 7 & Local Tomcat8 (Oracle JDK 1.7 & 1.8) 
+
+Heap Space is set to -Xmx256m
 
 # How it works:
 

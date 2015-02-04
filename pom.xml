@@ -44,7 +44,7 @@
 	</build>
 
 	<properties>
-		<jersery.version>2.15</jersery.version>
+		<jersey.version>2.15</jersey.version>
 		<spring.version>4.1.4.RELEASE</spring.version>
 	</properties>
 
@@ -88,7 +88,7 @@
 		<dependency>
 			<groupId>org.glassfish.jersey.ext</groupId>
 			<artifactId>jersey-spring3</artifactId>
-			<version>2.4.1</version>
+			<version>${jersey.version}</version>
 			<exclusions>
 				<exclusion>
 					<groupId>org.springframework</groupId>

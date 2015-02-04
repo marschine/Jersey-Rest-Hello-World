@@ -2,7 +2,8 @@
 
 Used this
 http://www.codingpedia.org/ama/restful-web-services-example-in-java-with-jersey-spring-and-mybatis/
-and this
+
+..and this
 http://www.mkyong.com/webservices/jax-rs/jersey-spring-integration-example/
 Tutorial.
 

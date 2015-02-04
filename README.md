@@ -57,31 +57,31 @@ in your jersey classes
 
 In the pom.xml you have to exclude the spring lib in the jersey-spring context
 
-<dependency>
-	<groupId>org.glassfish.jersey.ext</groupId>
-	<artifactId>jersey-spring3</artifactId>
-	<version>${jersey.version}</version>
-	<exclusions>
-		<exclusion>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring</artifactId>
-		</exclusion>
-		<exclusion>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-core</artifactId>
-		</exclusion>
-		<exclusion>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-web</artifactId>
-		</exclusion>
-		<exclusion>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-beans</artifactId>
-		</exclusion>
-		<exclusion>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-context</artifactId>
-		</exclusion>
-	</exclusions>
-</dependency>
+	<dependency>
+		<groupId>org.glassfish.jersey.ext</groupId>
+		<artifactId>jersey-spring3</artifactId>
+		<version>${jersey.version}</version>
+		<exclusions>
+			<exclusion>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring</artifactId>
+			</exclusion>
+			<exclusion>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-core</artifactId>
+			</exclusion>
+			<exclusion>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-web</artifactId>
+			</exclusion>
+			<exclusion>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-beans</artifactId>
+			</exclusion>
+			<exclusion>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-context</artifactId>
+			</exclusion>
+		</exclusions>
+	</dependency>
 

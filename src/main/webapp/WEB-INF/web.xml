@@ -14,31 +14,21 @@
 	<listener>
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
 	</listener>
-	<!-- Load Spring Context -->
 
-	<!-- Everything for the spring servlet -->
 	<servlet>
-		<!-- Just a name -->
-		<servlet-name>draftparser-backend</servlet-name>
-
-		<!-- Servlet Container for Jersey 2.x -->
-		<servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>
-		<!-- Decide which folder should be scanned for REST services -->
+		<servlet-name>jersey-serlvet</servlet-name>
+		<servlet-class>
+			com.sun.jersey.spi.spring.container.servlet.SpringServlet
+		</servlet-class>
 		<init-param>
-			<param-name>jersey.config.server.provider.packages</param-name>
-			<param-value>de.marrrschine.draftparser.draftparser_backend</param-value>
-		</init-param>
-		<!-- Should the subfolders be scanned as well? -->
-		<init-param>
-			<param-name>jersey.config.server.provider.scanning.recursive</param-name>
-			<param-value>true</param-value>
+			<param-name>com.sun.jersey.config.property.packages</param-name>
+			<param-value>com.mkyong.rest</param-value>
 		</init-param>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
-	<!-- Where should the Jersey Servlets be published? -->
-	<servlet-mapping>
-		<servlet-name>draftparser-backend</servlet-name>
-		<url-pattern>/webapi</url-pattern>
-	</servlet-mapping>
 
+	<servlet-mapping>
+		<servlet-name>jersey-serlvet</servlet-name>
+		<url-pattern>/rest/*</url-pattern>
+	</servlet-mapping>
 </web-app>

@@ -12,5 +12,4 @@
 	<bean id="TransactionBo"
 		class="de.marrrschine.draftparser.draftparser_backend.TransactionBoImpl" />
 
-
 </beans>

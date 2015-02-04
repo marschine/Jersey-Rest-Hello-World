@@ -85,3 +85,9 @@ In the pom.xml you have to exclude the spring lib in the jersey-spring context
 		</exclusions>
 	</dependency>
 
+This Project uses 	
+
+	<properties>
+		<jersey.version>2.15</jersey.version>
+		<spring.version>4.1.4.RELEASE</spring.version>
+	</properties>

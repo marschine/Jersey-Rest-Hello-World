@@ -15,27 +15,31 @@ Heap Space is set to -Xmx256m
 # How it works:
 
 web.xml:
-		<init-param>
-			<param-name>javax.ws.rs.Application</param-name>
-			<param-value>de.marrrschine.draftparser.draftparser_backend.MyApplication</param-value>
-		</init-param>
-defines which the ResourceConfig which loads 
-	public MyApplication() {
-		register(RequestContextFilter.class);
-		register(PaymentService.class);
-	}
+
+	<init-param>
+		<param-name>javax.ws.rs.Application</param-name>
+		<param-value>de.marrrschine.draftparser.draftparser_backend.MyApplication</param-value>
+	</init-param>
+
+defines which the ResourceConfig which loads
+
+		public MyApplication() {
+			register(RequestContextFilter.class);
+			register(PaymentService.class);
+		}
+
 a request filter and your Jersey Class
 
 also in the web.xml
+
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
 		<param-value>/WEB-INF/applicationContext.xml</param-value>
 	</context-param>
-
 	<listener>
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
 	</listener>
-	
+
 to load the springt context and define the application context where every bean has to be defined:
 
 	<context:component-scan
@@ -45,6 +49,8 @@ to load the springt context and define the application context where every bean 
 		class="de.marrrschine.draftparser.draftparser_backend.TransactionBoImpl" />
 
 since the rest class is loaded and the beans are defined you can inject them easily via
+
 	@Autowired
 	TransactionBo transactionBo;
+
 in your jersey classes
